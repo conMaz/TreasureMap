@@ -8,11 +8,11 @@ public class TreasureMapRunner {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//		Grid g = new Grid(4, 5);
-		//		g.addTreasureChest(new TreasureChest("1"), 0, 0);
-		//		g.addTreasureChest(new TreasureChest("2"), 1, 2);
-		//		TreasureChestManager v = new TreasureChestManager();
-		//		v.displayTreasureChestNearby(g);
+		//				Grid g = new Grid(4, 5);
+		//				g.addTreasureChest(new TreasureChest("1"), 0, 0);
+		//				g.addTreasureChest(new TreasureChest("2"), 1, 2);
+		//				TreasureChestManager v = new TreasureChestManager();
+		//				v.displayTreasureChestNearby(g);
 		instructions();
 		runTreasurMapApp();		
 
@@ -142,7 +142,7 @@ public class TreasureMapRunner {
 			TreasureChestCounter counter = new TreasureChestManager();
 			System.out.println("**********Treasure maps nearby****************" );
 			counter.displayTreasureChestNearby(grid);
-			
+
 			System.out.println("thank you for using the trasure map finder");
 
 		}
@@ -153,6 +153,6 @@ public class TreasureMapRunner {
 		return scanner.nextLine();
 
 	}
-	
-	
+
+
 }

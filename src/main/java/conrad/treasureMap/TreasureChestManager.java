@@ -78,9 +78,11 @@ public class TreasureChestManager implements TreasureChestCounter {
 	}
 
 	private int checkColumn(TreasureChest[][]treasureChestGrid,int row,int col,int counter){
-		TreasureChest nChest =treasureChestGrid[row][col];
-		if(nChest!=null){
-			counter++;
+		if(row<treasureChestGrid[0].length&&col<treasureChestGrid[1].length){
+			TreasureChest nChest =treasureChestGrid[row][col];
+			if(nChest!=null){
+				counter++;
+			}
 		}
 		return counter;
 	}
@@ -113,7 +115,7 @@ public class TreasureChestManager implements TreasureChestCounter {
 	}
 
 	private int checkTreasureChestsNearby(int row,int col,int rows,int cols,int counter,TreasureChest[][] treasureChestGrid){
-		counter =checkFirstRow(rows, col, cols, counter, treasureChestGrid);
+		counter =checkFirstRow(row, col, cols, counter, treasureChestGrid);
 		counter=checkNextRow(row, col, rows, cols, counter, treasureChestGrid);
 		counter= checkRowAbove(row, col, rows, cols, counter, treasureChestGrid);
 		return counter;
